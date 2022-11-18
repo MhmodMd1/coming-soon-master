@@ -1,0 +1,205 @@
+:root {
+    /* Primary */
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    /* Neutral */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /* Gradients */
+    /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 80%, 86%) */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    height: 128vh;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content {
+    width: 58%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-size: cover;
+    padding: 65px 154px;
+}
+.mobile-img {
+    display: none;
+}
+h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    letter-spacing: 17px;
+    font-weight: 600;
+    line-height: 1.11;
+    color: var(--Dark-Grayish-Red);
+}
+p {
+    margin-top: 30px;
+    line-height: 1.7;
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    font-size: 17px;
+    max-width: 430px;
+}
+.content .text span {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 200 !important;
+    color: var(--Desaturated-Red);
+    letter-spacing: 17px;
+    margin-top: 130px;
+    font-size: 65px;
+    margin-bottom: 5px;
+}
+form {
+    width: 400px;
+    margin-top: 50px;
+    position: relative;
+}
+input {
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    border: 1px solid var(--Desaturated-Red);
+    background-color: transparent;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+input:focus {
+    outline-color: var(--Soft-Red);
+}
+input::placeholder {
+    color: var(--Desaturated-Red);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    height: 57px;
+    position: absolute;
+    right: -9%;
+    width: 100px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%) ;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+button:focus {
+    outline: none;
+}
+button:hover {
+    background-color: hsl(0, 80%, 86%);
+}
+.erorr {
+    position: absolute;
+    right: 111%;
+    display: none;
+}
+.show {
+    display: inline;
+}
+.erorr-message {
+    display: block;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: var(--Soft-Red);
+    font-size: 13px;
+}
+.message-work {
+    color: #4caf50;
+}
+.image {
+    width: 42%;
+    height: 100%;
+    background-image: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+}
+@media (max-width: 1100px) {
+    .content {
+        padding: 0;
+        padding-top: 50px ;
+        padding-left: 30px;
+    }
+    form {
+        width: 90%;
+    }
+}
+@media (max-width: 600px) {
+    .image {
+        width: 0%;
+        display: none;
+    }
+    .content {
+        width: 100%;
+        padding: 0;
+        padding-top: 50px;
+    }
+    .logo {
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    .text {
+        text-align: center;
+    }
+    .content .text span {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        max-width: 330px;
+        margin: auto;
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .mobile-img {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+    }
+    form {
+        width: 350px;
+        text-align: center;
+    }
+    input {
+        margin-bottom: 20px;
+        width: 85%
+    }
+    button {
+        right: 2%;
+    }
+}
+@media (max-width: 700px) {
+    .content .text span {
+        font-size: 60px;
+        margin-top: 50px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
